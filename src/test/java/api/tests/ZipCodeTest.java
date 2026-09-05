@@ -52,5 +52,36 @@ public class ZipCodeTest extends BaseApiTest {
             .statusCode(404);
 
     }
+    @Test
+    public void inValidCountryCode_returnsNotFound() {
+        given(reqSpec)
+                .pathParam("country", "uss")
+                .pathParam("postalCode", "90210")
+        .when()
+                .get(ENDPOINT)
+        .then()
+                .statusCode(404);
 
+    }
+    @Test
+    public void emptyCountryCode_returnsNotFoundOrBadRequest() {
+        given(reqSpec)
+                .when()
+                .get("https://api.zippopotam.us//90210")
+                .then()
+                .log().all()
+                .statusCode(anyOf(is(404), is(400)));
+
+    }
+
+    @Test
+    public void emptypostalCode_returnsNotFoundOrBadRequest() {
+        given(reqSpec)
+                .when()
+                .get("https://api.zippopotam.us/us/")
+                .then()
+                .log().all()
+                .statusCode(anyOf(is(404), is(400)));
+
+    }
 }
