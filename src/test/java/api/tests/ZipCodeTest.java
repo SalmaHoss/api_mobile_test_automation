@@ -69,7 +69,7 @@ public class ZipCodeTest extends BaseApiTest {
                 .when()
                 .get("https://api.zippopotam.us//90210")
                 .then()
-                .log().all()
+                //.log().all()
                 .statusCode(anyOf(is(404), is(400)));
 
     }
@@ -80,7 +80,7 @@ public class ZipCodeTest extends BaseApiTest {
                 .when()
                 .get("https://api.zippopotam.us/us/")
                 .then()
-                .log().all()
+                //.log().all()
                 .statusCode(anyOf(is(404), is(400)));
 
     }
