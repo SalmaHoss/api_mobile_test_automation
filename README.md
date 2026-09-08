@@ -189,11 +189,11 @@ mvn test
 ## Run API Tests Only
 
 mvn test -Dtest=ZipCodeTest
-
+![img.png](img.png)
 ## Run Mobile Tests Only
 
 mvn test -Dtest=AddArticleToReadingTest
-
+![img_1.png](img_1.png)
 ---
 
 # Mobile Configuration
@@ -235,6 +235,8 @@ The implementation is focused on the scenarios provided in the technical task wh
 
 ---
 
+
+---
 # Author
 
 Salma Hossam
