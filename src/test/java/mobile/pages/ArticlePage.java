@@ -20,7 +20,6 @@ public class ArticlePage extends BasePage {
     private final By promoCloseButton =
             By.id("org.wikipedia:id/closeButton");
 
-    // تأكد من الـ id الحقيقي عن طريق Appium Inspector قبل الاعتماد عليه
     private final By tooltipGotItButton =
             By.id("org.wikipedia:id/got_it_button");
 
@@ -137,7 +136,6 @@ public class ArticlePage extends BasePage {
 
     public boolean isArticleDisplayed() {
 
-        // النوافذ المنبثقة (promo + onboarding tooltip) قد تظهر قبل قراءة العنوان
         dismissPromoOverlayIfPresent();
         dismissTooltipIfPresent();
 
