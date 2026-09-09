@@ -23,15 +23,14 @@ public class OnboardingPage extends BasePage {
         for (int i = 0; i < 3; i++) {
             try {
                 click(nextArrowButton);
-                Thread.sleep(500); // برهة بسيطة بين كل انتقال شاشة
+                Thread.sleep(500); 
             } catch (Exception e) {
-                break; // لو وصلنا لآخر شاشة قبل الوقت المتوقع
+                break; 
             }
         }
         try {
             click(skipButton);
         } catch (Exception e) {
-            // الشاشة الرابعة ممكن تكون اتخطت لو العدد اختلف
         }
     }
 }
